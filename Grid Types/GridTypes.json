@@ -1,0 +1,69 @@
+[
+    {
+        "name": "Same brand & class",
+        "script": "strutils.equals_i(selected.Brand, tested.Brand) and strutils.equals_i(selected.CarClass, tested.CarClass)"
+    },
+    {
+        "name": "Same era & class",
+        "script": "selected.Year ~= nil and tested.Year ~= nil and math.abs(selected.Year - tested.Year) < 10 and strutils.equals_i(selected.CarClass, tested.CarClass)"
+    },
+    {
+        "name": "Similar P/W ratio",
+        /* only 5% difference */
+        "script": "
+            return function(tested) 
+                local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.05
+            end"
+    },
+    {
+        "name": "Same subclass only",
+        "script": "
+            return function(tested) 
+                local subclass = selected.Tags:FirstOrDefault(function (x) return string.sub(x, 1, 1) == '#' end)
+                return tested.Tags:Contains(subclass)
+            end"
+    },
+    {
+        "name": "Same racing class (GT3/GT2/…)",
+        "filter": "class:race",
+        "script": "
+            -- tags to search for
+            classes = { 'gt3', 'gt2', '#GT4', '#90s touring' }
+
+            -- try to find some tag in selected car
+            racingclass = nil
+            for i, cl in ipairs(classes) do
+                if selected.Tags:ContainsIgnoringCase(cl) then
+                    racingclass = cl
+                    break
+                end
+            end
+
+            -- logging
+            if racingclass ~= nil then 
+                log('selected class: ' .. racingclass)
+            else
+                log('selected class: NIL')
+            end
+
+            -- in case there is no any tag at all, result is false
+            if racingclass == nil then 
+                return false
+            end
+
+            -- result function which will try to find that tag in any tested car
+            return function(tested)
+                return tested.Tags:ContainsIgnoringCase(racingclass)
+            end"
+    },
+    {
+        "name": "Classic race cars",
+        "filter": "class:race & year<1980"
+    },
+    {
+        "name": "Modern race cars",
+        "filter": "class:race & year>2000"
+    },
+]

@@ -1,0 +1,39 @@
+[
+    /* default value for icon: [name].png */
+    { 
+        "name": "Kunos", 
+        "description": "Only original tracks (+DLC)", 
+        "filter": "author:Kunos" 
+    },
+    { 
+        "name": "New", 
+        "filter": "new+" 
+    },
+    { 
+        "name": "Circuit", 
+        "filter": "tag:circuit | *circuit*" 
+    },
+    { 
+        "name": "Drift", 
+        "filter": "tag:drift | *drift*" 
+    },
+    { 
+        "name": "Drag", 
+        "filter": "tag:drag | *drag*" 
+    },
+    { 
+        "name": "Rally", 
+        "filter": "tag:rally" 
+    },
+    { 
+        "name": "H & D", 
+        "description": "Hillclimb & Downclimb", 
+        "icon": "Hillclimb.png",
+        "filter": "tag:hillclimb | *hillclimb* | description:*hillclimb* | tag:downclimb | *downclimb* | description:*downclimb*" 
+    },
+    { 
+        "name": "Long", 
+        "description": "More than 10 km", 
+        "filter": "length>10000"
+    }
+]

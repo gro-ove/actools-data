@@ -1,0 +1,67 @@
+{
+      "Brazil": [
+            "brasil"
+      ],
+      "China": [
+            "chinese",
+            "hong kong",
+            "hongkong"
+      ],
+      "Germany": [
+            "german"
+      ],
+      "Italy": [
+            "italia"
+      ],
+      "Slovenia": [
+            "eslovenia"
+      ],
+      "N/A": [
+            "european",
+            "fictional",
+            "fantasy",
+            "virtual",
+            "world",
+            "magical wonderland"
+      ],
+      "United Arab Emirates": [
+            "abu dhabi"
+      ],
+      "Great Britain": [
+            "gb",
+            "g.b",
+            "g.b.",
+            "uk",
+            "u.k",
+            "u.k.",
+            "united kingdom",
+            "england",
+            "british",
+            "scotland",
+            "angleterre",
+            "wales",
+            "britain"
+      ],
+      "Côte d’Ivoire": [
+            "cote d'ivoire",
+            "côte d'ivoire",
+            "cote d’ivoire"
+      ],
+      "Czech Republic": [
+            "czech"
+      ],
+      "South Korea": [
+            "korea",
+            "korea, south"
+      ],
+      "USA": [
+            "us",
+            "united states",
+            "u.s.a",
+            "u.s.a.",
+            "america"
+      ],
+      "Sweden": [
+            "swedish"
+      ]
+}

@@ -1,0 +1,28 @@
+[
+    /* default value for icon: [name].png */
+    { 
+        "name": "Kunos", 
+        "description": "Only original tracks (+DLC)", 
+        "filter": "author:Kunos" 
+    },
+    { 
+        "name": "New", 
+        "filter": "new+" 
+    },
+    { 
+        "name": "Drift", 
+        "filter": "tag:drift" 
+    },
+    { 
+        "name": "Rally", 
+        "filter": "tag:rally" 
+    },
+    { 
+        "name": "Classic",
+        "filter": "tag:#vintage*|tag:vintage|year<1980" 
+    },
+    { 
+        "name": "Sportscar",
+        "filter": "(tag:*supercar* | tag:*hypercar* | tag:*sportscar*) & class:street" 
+    }
+]
