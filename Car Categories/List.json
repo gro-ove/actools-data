@@ -11,7 +11,7 @@
     },
     { 
         "name": "Drift", 
-        "filter": "tag:drift" 
+        "filter": "tag:drift | tag:#drift | drift" 
     },
     { 
         "name": "Rally", 

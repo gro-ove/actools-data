@@ -1,31 +1,53 @@
 [
     {
+        "id": "same_brand_class",
         "name": "Same brand & class",
         "script": "strutils.equals_i(selected.Brand, tested.Brand) and strutils.equals_i(selected.CarClass, tested.CarClass)"
     },
     {
+        "id": "same_era_class",
         "name": "Same era & class",
-        "script": "selected.Year ~= nil and tested.Year ~= nil and math.abs(selected.Year - tested.Year) < 10 and strutils.equals_i(selected.CarClass, tested.CarClass)"
-    },
-    {
-        "name": "Similar P/W ratio",
-        /* only 5% difference */
         "script": "
+            local year = selected.Year
+            if year == nil then
+                error('Selected car doesn’t have year')
+            end
+
             return function(tested) 
-                local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
-                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
-                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.05
+                return year ~= nil and tested.Year ~= nil and math.abs(year - tested.Year) < 10 and 
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
             end"
     },
     {
+        "id": "similar_p_w_ratio",
+        "name": "Similar P/W ratio",
+        /* only 5% difference */
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.05 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "id": "same_subclass_only",
         "name": "Same subclass only",
         "script": "
+            local subclass = selected.Tags:FirstOrDefault(function (x) return string.sub(x, 1, 1) == '#' end)
+            if subclass == nil then
+                error('Selected car doesn’t have subclass')
+            end
+
             return function(tested) 
-                local subclass = selected.Tags:FirstOrDefault(function (x) return string.sub(x, 1, 1) == '#' end)
                 return tested.Tags:Contains(subclass)
             end"
     },
     {
+        "id": "same_racing_class_gt3_gt2_",
         "name": "Same racing class (GT3/GT2/…)",
         "filter": "class:race",
         "script": "
@@ -50,6 +72,7 @@
 
             -- in case there is no any tag at all, result is false
             if racingclass == nil then 
+                error('Can’t detect selected car’s racing class')
                 return false
             end
 
@@ -57,13 +80,5 @@
             return function(tested)
                 return tested.Tags:ContainsIgnoringCase(racingclass)
             end"
-    },
-    {
-        "name": "Classic race cars",
-        "filter": "class:race & year<1980"
-    },
-    {
-        "name": "Modern race cars",
-        "filter": "class:race & year>2000"
-    },
+    }
 ]
