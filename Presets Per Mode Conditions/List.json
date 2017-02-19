@@ -1,0 +1,42 @@
+[
+    {
+        "id": "online",
+        "name": "Online",
+        "script": "race['REMOTE']['ACTIVE']"
+    },
+    {
+        "id": "replay",
+        "name": "Replay",
+        "script": "race['REPLAY']['ACTIVE']"
+    },
+    {
+        "id": "hotlap",
+        "name": "Hotlap",
+        "script": "race['SESSION_0'].GetInt('TYPE', 0) == SessionType.Hotlap"
+    },
+    {
+        "id": "rsr",
+        "name": "RSR Hotlap",
+        "script": "race['SESSION_0'].GetNonEmpty('NAME').Contains('RSR')"
+    },
+    {
+        "id": "trackday",
+        "name": "Track Day",
+        "script": "race['SESSION_0'].GetInt('DURATION_MINUTES', 0) == 720"
+    },
+    {
+        "id": "practice",
+        "name": "Practice",
+        "script": "race['SESSION_0'].GetInt('TYPE', 0) == SessionType.Practice and not race.ContainsKey('SESSION_1')"
+    },
+    {
+        "id": "drag",
+        "name": "Drag",
+        "script": "race['SESSION_0'].GetInt('TYPE', 0) == SessionType.Drag"
+    },
+    {
+        "id": "drift",
+        "name": "Drift",
+        "script": "race['SESSION_0'].GetInt('TYPE', 0) == SessionType.Drift"
+    }
+]
