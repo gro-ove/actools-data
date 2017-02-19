@@ -5,25 +5,16 @@
       "China": [
             "chinese"
       ],
+      "Côte d’Ivoire": [
+            "cote d'ivoire",
+            "côte d'ivoire",
+            "cote d’ivoire"
+      ],
+      "Czech Republic": [
+            "czech"
+      ],
       "Germany": [
             "german"
-      ],
-      "Italy": [
-            "italia"
-      ],
-      "Slovenia": [
-            "eslovenia"
-      ],
-      "N/A": [
-            "european",
-            "fictional",
-            "fantasy",
-            "virtual",
-            "world",
-            "magical wonderland"
-      ],
-      "United Arab Emirates": [
-            "abu dhabi"
       ],
       "Great Britain": [
             "gb",
@@ -40,17 +31,32 @@
             "wales",
             "britain"
       ],
-      "Côte d’Ivoire": [
-            "cote d'ivoire",
-            "côte d'ivoire",
-            "cote d’ivoire"
+      "Hong Kong": [
+            "hongkong"
       ],
-      "Czech Republic": [
-            "czech"
+      "Italy": [
+            "italia"
+      ],
+      "N/A": [
+            "european",
+            "fictional",
+            "fantasy",
+            "virtual",
+            "world",
+            "magical wonderland"
+      ],
+      "Slovenia": [
+            "eslovenia"
       ],
       "South Korea": [
             "korea",
             "korea, south"
+      ],
+      "Sweden": [
+            "swedish"
+      ],
+      "United Arab Emirates": [
+            "abu dhabi"
       ],
       "USA": [
             "us",
@@ -58,8 +64,5 @@
             "u.s.a",
             "u.s.a.",
             "america"
-      ],
-      "Sweden": [
-            "swedish"
       ]
 }
