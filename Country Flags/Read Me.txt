@@ -1,0 +1,1 @@
+If you want to add some more flags, please, go to “Miscellaneous/CountryIds.json” and add an entry. Also, don’t forget about “Miscellaneous/Countries.json” as well.

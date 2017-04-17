@@ -1,0 +1,81 @@
+{
+  "abarth500": [
+    "@guess",
+    { "type": "tintedWindow", "name": "Glass", "texture": "Glass.dds", "tintBase": true, "defaultColor": "#ffffff" },
+    { 
+      "type": "color",
+      "name": "Rims",
+      "pairs": {
+        "Rim500.DDS": { "source": "./abarth500__rim_base.jpg", "mask": "./abarth500__rim_mask.png" },
+        "Rim500_BLUR.dds": { "source": "./abarth500__rim_blur_base.jpg", "mask": "./abarth500__rim_mask.png" }
+      },
+      "defaultColors": [ "#ffffff", "#fffff00" ]
+    },
+  ],
+  "abarth500_s1": [
+    "@guess",
+    { "type": "tintedWindow", "name": "Glass", "texture": "Glass.dds", "tintBase": true, "defaultColor": "#ffffff" },
+    { "type": "color", "name": "Rims", "pairs": { "Rim500.DDS": "@self", "Rim500_BLUR.dds": "@self" }, "autoLevel": true, "defaultColor": "#ffffff" },
+  ],
+  "lotus_2_eleven": [
+    "@guess",
+    { 
+      "type": "carPaint",
+      "texture": "metal_detail.dds",
+      "defaultColor": "#808080", 
+      "flakesSize": 256,
+
+      "mapsTexture": "chassis_A_D_map.dds",
+      /*"mapsDefaultTexture": "./ao.jpg",*/
+      "mapsAutoLevel": true,
+
+      "patternTexture": "chassis_A_D2.dds",
+      "patternBase": "./lotus_2_eleven__ao.jpg",
+      "patternOverlay": "chassis_A_D2.dds", /* only non-transparent areas will be used, everything else will be ignored, so chassis_A_D2.dds will do just fine */
+      "patterns": [
+        { "name": "Stripes", "defaultColors": [ "#ff00ff", "#fffff00" ], "pattern": "./lotus_2_eleven__stripes.png", "overlay": null },
+      ],
+    },
+  ],
+  "ks_porsche_911_r": [
+    "@guess",
+    /* for a test */
+    // { "type": "color", "name": "Glass", "tintBase": true, "texture": "Glass_and_lights.dds" }, /* because alpha is in normals texture */
+    // { "type": "color", "name": "Glass (solid)", "texture": "Glass_and_lights.dds" },
+    //{ "type": "tintedWindow", "name": "Glass (adjust alpha)", "texture": "Glass_and_lights_NM.dds", "tintBase": true, "defaultColor": "#ffffff", "fixedColor": true },
+    //{ "type": "tintedWindow", "name": "Glass (adjust alpha, solid)", "texture": "Glass_and_lights_NM.dds", "defaultColor": "#8080ff", /* because of normals, but it’s still a bad idea */ "fixedColor": true },
+    { "type": "color", "name": "Seats leather", "texture": "leather_seat.dds" },
+    { "type": "color", "name": "Seats fabric", "texture": "pepita_fabric.dds", "tintBase": true },
+    { "type": "color", "name": "Seats fabric (solid)", "texture": "pepita_fabric.dds", "allowedColors": {
+      "Lapis Blue": "#323f48",
+      "Portofino": "#2b3033",
+      "Sandalwood": "#655f50",
+      "Ebony": "#2b2f2e",
+      "Snow": "#f3f5f2",
+    } }, /* for a test */
+    { "type": "replacement", "name": "Gauges", "texture": "INT_Gauges.dds", "candidates": {
+      "White": "./ks_porsche_911_r__white_gauges.dds",
+      "Green": "@self",
+      "Blue": "./ks_porsche_911_r__blue_gauges.dds",
+      "Yellow": "./ks_porsche_911_r__yellow_gauges.dds",
+    } }, /* for a test */
+    { "type": "color", "name": "Exhaust", "texture": "exhaust_detail.dds" }, /* for a test */
+    { "type": "licensePlate", "texture": "Plate_D.dds", "normals": null },
+    { 
+      "type": "carPaint",
+      "texture": "metal_detail.dds",
+      "defaultColor": "#606060", 
+      "flakesSize": 256,
+
+      "mapsTexture": "Skin_00_MAP.dds",
+
+      "patternTexture": "Skin_00.dds",
+      "patternBase": "./ks_porsche_911_r__ao.jpg",
+      "patterns": [
+        { "name": "Stripes", "defaultColors": [ "#ffff00", "#ffffff" ], "pattern": "./ks_porsche_911_r__stripes.png" },
+      ],
+
+      "liveryStyle": "Stripes"
+    },
+  ],
+}

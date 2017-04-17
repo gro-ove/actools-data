@@ -1,0 +1,33 @@
+{
+  "peugeot_504": [
+    { "type": "licensePlate", "style": "Europe" },
+    { "type": "carPaint", "texture": "car_paint.dds", "mapsTexture": "carpaint_MAP.dds", "mapsAutoLevel": true, "defaultColor": "#deb887" },
+    { "type": "color", "name": "Rims", "texture": "rims_color.dds", "defaultColor": "#5f9ea0" },
+    { "type": "color", "name": "Interior", "texture": "int_inside_color.dds", "defaultColor": "#f5deb3" },
+    { "type": "color", "name": "Leather", "texture": "int_leather_color.dds", "defaultColor": "#a52a2a" },
+    { "type": "color", "name": "Cloth", "texture": "int_cloth_color.dds", "defaultColor": "#f5deb3" },
+    { "type": "transparentIfFlagged", "name": "Yellow headlights", "texture": "ext_headlight_yellow.dds", "inverse": true /* headlights are yellow when texture is non-transparent*/, "enabled": true },
+    { "type": "tintedWindow", "texture": "ext_glass.dds" },
+  ],
+  "peugeot_504_tn": [
+    { "type": "licensePlate", "style": "Europe" },
+    { "type": "carPaint", "texture": "tn_car_paint.dds", "mapsTexture": "tn_carpaint_MAP.dds", "mapsDefaultTexture": "tn_carpaint_SKIN.dds" /* instead of auto-leveling */, "defaultColor": "#deb887" },
+    { "type": "color", "name": "Rims", "texture": "tn_rims_color.dds", "defaultColor": "#000000" },
+    { "type": "color", "name": "Interior", "texture": "tn_int_inside_color.dds", "defaultColor": "#f5deb3" },
+    { "type": "color", "name": "Leather", "texture": "tn_int_leather_color.dds", "defaultColor": "#000000" },
+    { "type": "color", "name": "Cloth", "texture": "tn_int_cloth_color.dds", "defaultColor": "#f5deb3" },
+    { "type": "transparentIfFlagged", "name": "Yellow headlights", "texture": "ext_headlight_yellow.dds", "inverse": true /* headlights are yellow when texture is non-transparent*/, "enabled": true },
+    { "type": "tintedWindow", "texture": "ext_glass.dds" },
+  ],
+  "acc_porsche_914-6": [
+    { "type": "licensePlate", "style": "Europe" },
+    { "type": "carPaint", "texture": "car_paint.dds", "mapsTexture": "ext_MAP.dds", "mapsAutoLevel": true },
+    { "type": "color", "name": "Rims", "texture": "car_paint_rims.dds", "defaultColor": "#000000" },
+    { "type": "tintedWindow", "texture": "ext_glass.dds" },
+  ],
+  "acc_nissan_r33_drift": [
+    "@guess",
+    { "type": "licensePlate", "style": "Japan" },
+    { "type": "replacedIfFlagged", "name": "Black exhaust", "pairs": { "exhaust.dds": "./acc_nissan_r33_drift__exhaust.dds", "exhaust_map.dds": "./acc_nissan_r33_drift__exhaust_map.dds" } },
+  ],
+}

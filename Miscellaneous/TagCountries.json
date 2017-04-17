@@ -26,9 +26,7 @@
             "united kingdom",
             "england",
             "british",
-            "scotland",
             "angleterre",
-            "wales",
             "britain"
       ],
       "Hong Kong": [
@@ -45,8 +43,14 @@
             "world",
             "magical wonderland"
       ],
+      "Scotland": [
+            "scottish"
+      ],
       "Slovenia": [
             "eslovenia"
+      ],
+      "Soviet Union": [
+            "ussr"
       ],
       "South Korea": [
             "korea",
@@ -57,6 +61,9 @@
       ],
       "United Arab Emirates": [
             "abu dhabi"
+      ],
+      "Wales": [
+            "welsh"
       ],
       "USA": [
             "us",
