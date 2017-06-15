@@ -1,0 +1,76 @@
+[
+  {
+    "pos": "0.68,0.55,1.7",
+    "color": "#E5D19C",
+    "brightness": 2.24,
+    "name": "Headlight L",
+    "shadows": true,
+    "attached": "g_HL_Open_L_SUB0",
+    "direction": "0,-0.87,0.5",
+    "range": 10.0,
+    "angle": 0.5,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "-0.68,0.55,1.7",
+    "color": "#E5D19C",
+    "brightness": 2.24,
+    "name": "Headlight R",
+    "shadows": true,
+    "attached": "g_HL_Open_R_SUB0",
+    "direction": "0,-0.87,0.5",
+    "range": 10.0,
+    "angle": 0.5,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "0.6,0.47,1.93",
+    "color": "#E5D19C",
+    "brightness": 0.5,
+    "name": "Headlight L Small",
+    "direction": "0,-0.45,0.89",
+    "range": 5.0,
+    "angle": 0.48,
+    "spot": 1.0,
+    "type": 2
+  },
+  {
+    "pos": "-0.6,0.47,1.93",
+    "color": "#E5D19C",
+    "brightness": 0.5,
+    "name": "Headlight R Small",
+    "direction": "0,-0.45,0.89",
+    "range": 5.0,
+    "angle": 0.48,
+    "spot": 1.0,
+    "type": 2
+  },
+  {
+    "pos": "-0.55,0.68,-2.17",
+    "color": "#FF0201",
+    "brightness": 0.4,
+    "name": "Brakelight R",
+    "headlightsMultiplier": 0.3,
+    "shadows": true,
+    "direction": "-0.22,-1.24,-1.2",
+    "range": 1.5,
+    "angle": 1.4,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "0.55,0.68,-2.17",
+    "color": "#FF0201",
+    "brightness": 0.4,
+    "name": "Brakelight L",
+    "headlightsMultiplier": 0.3,
+    "shadows": true,
+    "direction": "0.22,-1.24,-1.2",
+    "range": 1.5,
+    "angle": 1.4,
+    "spot": 0.5,
+    "type": 2
+  }
+]

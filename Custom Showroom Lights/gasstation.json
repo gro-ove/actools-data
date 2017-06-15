@@ -1,0 +1,59 @@
+[
+  {
+    "pos": "3.692933,0.1521638,1.407934",
+    "color": "#9EE8FF",
+    "brightness": 2.0,
+    "name": "Light L",
+    "shadows": true,
+    "shadowsResolution": 4096,
+    "direction": "-0.8903469,0.2879741,-0.3526376",
+    "range": 9.4,
+    "angle": 1.047,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "-3.717431,0.1521638,-1.3435",
+    "color": "#9EE8FF",
+    "brightness": 2.0,
+    "name": "Light R",
+    "shadows": true,
+    "shadowsResolution": 4096,
+    "direction": "0.9205761,0.2879729,0.2638394",
+    "range": 9.4,
+    "angle": 1.047,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "0.6758868,0.1521638,-3.864389",
+    "color": "#9EE8FF",
+    "brightness": 2.0,
+    "name": "Light M",
+    "shadows": true,
+    "shadowsResolution": 4096,
+    "direction": "-0.1882893,0.2879723,0.9389458",
+    "range": 9.4,
+    "angle": 1.047,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "1.307192,2,3.375586",
+    "color": "#FF9E6B",
+    "brightness": 0.8,
+    "speculars": false,
+    "name": "Gas L",
+    "range": 3.0,
+    "type": 1
+  },
+  {
+    "pos": "-1.295769,2,3.375601",
+    "color": "#FF9E6B",
+    "brightness": 0.8,
+    "speculars": false,
+    "name": "Gas R",
+    "range": 3.0,
+    "type": 1
+  }
+]
