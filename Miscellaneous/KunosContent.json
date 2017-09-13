@@ -1,37 +1,44 @@
 {
-    "tracks": [
-        "drag1000",
-        "drag400",
-        "drift",
-        "imola",
-        "magione",
-        "monza",
-        "monza66",
-        "mugello",
-        "nurburgring",
-        "silverstone",
-        "silverstone-international",
-        "silverstone-national",
-        "spa",
-        "trento-bondone",
-        "vallelunga",
+  "tracks": [
+    "drag1000", "drag400", "monza66", "nurburgring", "silverstone",
+    "silverstone-international", "silverstone-national", "vallelunga",
 
-        "ks_barcelona",
-        "ks_black_cat_county",
-        "ks_brands_hatch",
-        "ks_drag",
-        "ks_nordschleife",
-        "ks_nurburgring",
-        "ks_silverstone",
-        "ks_vallelunga",
-        "ks_zandvoort"
-    ],
-    "showrooms": [
-        "beach",
-        "hangar",
-        "industrial",
-        "previews",
-        "showroom",
-        "sunset"
-    ]
+    "drift", "imola", "ks_barcelona", "ks_black_cat_county", "ks_brands_hatch",
+    "ks_drag", "ks_highlands", "ks_monza66", "ks_nordschleife", "ks_nurburgring",
+    "ks_red_bull_ring", "ks_silverstone", "ks_silverstone1967", "ks_vallelunga",
+    "ks_zandvoort", "magione", "monza", "mugello", "spa", "trento-bondone"
+  ],
+  "layouts": {    
+    "ks_barcelona": ["layout_gp", "layout_moto"],    
+    "ks_black_cat_county": ["layout_int", "layout_long", "layout_short"],    
+    "ks_brands_hatch": ["gp", "indy"], 
+    "ks_drag": ["drag1000", "drag200", "drag2000", "drag400", "drag500"], 
+    "ks_highlands": ["layout_drift", "layout_int", "layout_long", "layout_short"], 
+    "ks_monza66": ["full", "junior", "road"],    
+    "ks_nordschleife": ["endurance", "endurance_cup", "nordschleife", "touristenfahrten"], 
+    "ks_nurburgring": ["layout_gp_a", "layout_gp_b", "layout_sprint_a", "layout_sprint_b"], 
+    "ks_red_bull_ring": ["layout_gp", "layout_national"], 
+    "ks_silverstone": ["gp", "international", "national"],    
+    "ks_vallelunga": ["classic_circuit", "club_circuit", "extended_circuit"]
+  },
+  "showrooms": [
+    "previews",
+    "beach", "hangar", "industrial", "showroom", "studio_white"
+  ],
+  "drivers": [
+    "2016_Driver.kn5", "driver.kn5", "driver_60.kn5", "driver_60_B.kn5", "driver_70.kn5", "driver_70_B.kn5",
+    "driver_80.kn5", "driver_80_B.kn5", "driver_B.kn5", "driver_back.kn5", "driver_lod_b.kn5", 
+    "driver_no_HANS.kn5", "driver_no_HANS_B.kn5", "driver_ocolus.kn5", "new_driver.kn5"
+  ],
+  "fonts": [
+    "4c.txt", "599_big.txt", "599_mid.txt", "650S_big.txt", "650S_mid.txt", "a.txt", "aria.txt", "arial.txt",
+    "arial_big.txt", "audi_vln.txt", "aventador.txt", "aventador_b.txt", "aventador_mid.txt", "b.txt", "bosch.txt",
+    "c7_big.txt", "c7_mid.txt", "c7_new.txt","comic.txt", "console.txt", "console_small.txt", "default.txt",
+    "digital_big.txt", "digital_big_f138.txt", "digital_big_italic.txt", "digital_mid.txt", "digital_toyota.txt",
+    "digital_toyota_2.txt", "e92_big.txt", "e92_mid.txt", "f312.txt", "gallardo_1.txt", "gallardo_2.txt",
+    "german_led.txt", "german_led_mid.txt", "ks_audi_r8_plus.txt", "ks_corvette_c7.txt", "ks_nissan_gtr.txt",
+    "ks_ruf12r.txt", "led_audi.txt", "led_big.txt", "led_med.txt", "mclarenmp4gt3.txt", "mercedes_sls.txt",
+    "mg.txt", "Microgramma.txt", "Microsquare.txt", "mp4_big.txt", "porsche_big.txt", "sls.txt", "ttcup.txt",
+    "ttcup_big.txt"
+  ]
 }
