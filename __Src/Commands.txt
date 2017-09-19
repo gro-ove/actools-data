@@ -1,0 +1,7 @@
+echo \"${(j:", ":)$( grep -hoP 'content\\driver\\\K[^\\]+\.kn5' manifest_*.txt | sort | uniq )}\" | fold -sw 80
+echo \"${(j:", ":)$( grep -hoP 'content\\fonts\\\K[^\\]+\.txt' manifest_*.txt | sort | uniq )}\" | fold -sw 80
+echo \"${(j:", ":)$( grep -hoP 'content\\tracks\\\K[^\\]+(?=\\ui)' manifest_*.txt | sort | uniq )}\" | fold -sw 80
+echo \"${(j:", ":)$( grep -hoP 'content\\showroom\\\K[^\\]+' manifest_*.txt | sort | uniq )}\" | fold -sw 80
+
+# FIND KUNOS LAYOUTS
+node -pe 'JSON.stringify(process.argv.slice(1).reduce((a, b) => ((a[b.split("\\")[0]] || (a[b.split("\\")[0]] = [])).push(b.split("\\").splice(-1)[0]), a), {})).replace(/,/g, ", ")' $( grep -hoP 'content\\tracks\\\K[^\\]+\\ui\\[^\\]+(?=\\ui_track\.json)' manifest_*.txt | sort | uniq ) | fold -sw 80
