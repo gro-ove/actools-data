@@ -1,0 +1,60 @@
+[
+  {
+    "pos": "0.627,0.614,1.776",
+    "color": "#B2906F",
+    "brightness": 4.5,
+    "name": "Headlight L",
+    "shadows": true,
+    "smoothDelay": 0.049999999999999996,
+    "direction": "0,-0.4472136,0.8944271",
+    "range": 13.5,
+    "angle": 0.5,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "-0.627,0.614,1.776",
+    "color": "#B2906F",
+    "brightness": 4.5,
+    "name": "Headlight R",
+    "shadows": true,
+    "smoothDelay": 0.049999999999999996,
+    "direction": "0,-0.4472136,0.8944271",
+    "range": 13.5,
+    "angle": 0.5,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "0.532,0.55,-2.18",
+    "color": "#FE0300",
+    "brightness": 0.5,
+    "name": "Brakelight L",
+    "shadows": true,
+    "shadowsSmooth": true,
+    "shadowsBlur": 1.5,
+    "headlightsMultiplier": 0.093,
+    "smoothDelay": 0.049999999999999996,
+    "direction": "0.04496948,-0.512652,-0.857418",
+    "range": 1.5,
+    "angle": 1.4,
+    "spot": 0.5,
+    "type": 2
+  },
+  {
+    "pos": "-0.532,0.55,-2.18",
+    "color": "#FE0300",
+    "brightness": 0.5,
+    "name": "Brakelight R",
+    "shadows": true,
+    "shadowsSmooth": true,
+    "shadowsBlur": 1.5,
+    "headlightsMultiplier": 0.093,
+    "smoothDelay": 0.049999999999999996,
+    "direction": "-0.04496948,-0.512652,-0.857418",
+    "range": 1.5,
+    "angle": 1.4,
+    "spot": 0.5,
+    "type": 2
+  }
+]
