@@ -1,78 +1,78 @@
 {
-      "Brazil": [
-            "brasil"
-      ],
-      "China": [
-            "chinese"
-      ],
-      "Côte d’Ivoire": [
-            "cote d'ivoire",
-            "côte d'ivoire",
-            "cote d’ivoire"
-      ],
-      "Czech Republic": [
-            "czech"
-      ],
-      "Germany": [
-            "german"
-      ],
-      "Great Britain": [
-            "gb",
-            "g.b",
-            "g.b.",
-            "uk",
-            "u.k",
-            "u.k.",
-            "united kingdom",
-            "british",
-            "angleterre",
-            "britain"
-      ],
-      "Hong Kong": [
-            "hongkong"
-      ],
-      "Italy": [
-            "italia"
-      ],
-      "N/A": [
-            "european",
-            "fictional",
-            "fantasy",
-            "virtual",
-            "world",
-            "magical wonderland"
-      ],
-      "Russia": [
-            "russian federation",
-            "russian"
-      ],
-      "Scotland": [
-            "scottish"
-      ],
-      "Slovenia": [
-            "eslovenia"
-      ],
-      "Soviet Union": [
-            "ussr"
-      ],
-      "South Korea": [
-            "korea",
-            "korea, south"
-      ],
-      "Sweden": [
-            "swedish"
-      ],
-      "United Arab Emirates": [
-            "abu dhabi"
-      ],
-      "Wales": [
-            "welsh"
-      ],
-      "USA": [
-            "us",
-            "united states",
-            "u.s.a",
-            "u.s.a.",
-            "america"
-      ]
+	"Brazil": [
+		"brasil"
+	],
+	"China": [
+		"chinese"
+	],
+	"Côte d’Ivoire": [
+		"cote d'ivoire",
+		"côte d'ivoire",
+		"cote d’ivoire"
+	],
+	"Czech Republic": [
+		"czech"
+	],
+	"Germany": [
+		"german"
+	],
+	"Great Britain": [
+		"gb",
+		"g.b",
+		"g.b.",
+		"uk",
+		"u.k",
+		"u.k.",
+		"united kingdom",
+		"british",
+		"angleterre",
+		"britain"
+	],
+	"Hong Kong": [
+		"hongkong"
+	],
+	"Italy": [
+		"italia"
+	],
+	"N/A": [
+		"european",
+		"fictional",
+		"fantasy",
+		"virtual",
+		"world",
+		"magical wonderland"
+	],
+	"Russia": [
+		"russian federation",
+		"russian"
+	],
+	"Scotland": [
+		"scottish"
+	],
+	"Slovenia": [
+		"eslovenia"
+	],
+	"Soviet Union": [
+		"ussr"
+	],
+	"South Korea": [
+		"korea",
+		"korea, south"
+	],
+	"Sweden": [
+		"swedish"
+	],
+	"United Arab Emirates": [
+		"abu dhabi"
+	],
+	"Wales": [
+		"welsh"
+	],
+	"USA": [
+		"us",
+		"united states",
+		"u.s.a",
+		"u.s.a.",
+		"america"
+	]
 }
