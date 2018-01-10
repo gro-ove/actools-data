@@ -1,0 +1,13 @@
+// Logitech G25 Racing Wheel USB
+{
+  "name": "Logitech G25",
+  "axes": {
+    "0": "{ToolsStrings.Controls_Steer}",
+    "1": "{ToolsStrings.Controls_Gas}",
+    "5": "{ToolsStrings.Controls_Brake}",
+    "7": "{ToolsStrings.Controls_Clutch}",
+  },
+  "buttons": [
+    1, 2, 3, 4, "G+;Next gear", "G−;Previous gear", "Right button", "Left button", "Gear 1", "Gear 2", "Gear 3", "Gear 4", "Gear 5", "Gear 6", "Gear R", "△", "☐", "×", "○"
+  ]
+}
