@@ -1,0 +1,13 @@
+// Thrustmaster T500RS Racing Wheel
+{
+  "name": "Thrustmaster T500RS",
+  /*"axes": {
+    "0": "{ToolsStrings.Controls_Steer}",
+    "1": "{ToolsStrings.Controls_Brake}",
+    "5": "{ToolsStrings.Controls_Gas}",
+    "6": "{ToolsStrings.Controls_Clutch}",
+  },*/
+  "buttons": [
+    "G−;Previous gear", "G+;Next gear", "△", "☐", "○", "×", "SE", "ST", "R2", "L2", "L3", "R3", "PS"
+  ]
+}
