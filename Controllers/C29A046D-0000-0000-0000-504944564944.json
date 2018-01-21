@@ -1,3 +1,4 @@
+// Logitech Driving Force GT
 {
   "name": "Logitech Driving Force GT",
   "axes": {
@@ -9,7 +10,7 @@
     "×", "☐", "○", "△", 
     "R1;Right Paddle", "L1;Left Paddle", "R2", "L2", 
     "SE;Select", "ST;Start", "R3", "L3", 
-    "G+;Gear Shifter Down", "G−;Gear Shifter Up", "⏎;Jogwheel Enter", "+;Plus Button", 
-    "»;Jogwheel Right", "«;Jogwheel Left", "−;Minus Button", "H;Horn Button", "PS"
+    "G+;Gear Shifter Down", "G−;Gear Shifter Up", "⏎;Jogwheel Enter", "+", 
+    "»;Jogwheel Right", "«;Jogwheel Left", "−", "H;Horn Button", "PS"
   ]
 }
