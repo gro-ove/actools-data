@@ -1,16 +1,28 @@
 // Thrustmaster T300RS Racing Wheel
 {
   "name": "Thrustmaster T300RS",
-  "axes": {
-    "0": "{ToolsStrings.Controls_Steer}",
-    "1": "{ToolsStrings.Controls_Brake}",
-    "5": "{ToolsStrings.Controls_Gas}",
-    "6": "{ToolsStrings.Controls_Clutch}",
+  "axis": {
+    "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
+    "1": "{ToolsStrings.Controls_Brake};Brake Pedal",
+    "5": "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "6": "{ToolsStrings.Controls_Clutch};Clutch Pedal"
   },
   "pov": [
-    "POV"
+    "P"
   ],
   "buttons": [
-    "G−;Previous gear", "G+;Next gear", "△", "☐", "○", "×", "SE", "ST", "R2", "L2", "L3", "R3", "PS"
+    "❮;Left Paddle",
+    "❯;Right Paddle",
+    "△",
+    "☐",
+    "○",
+    "×",
+    "SE;Select Button",
+    "ST;Start Button",
+    "R2",
+    "L2",
+    "L3",
+    "R3",
+    "PS;PlayStation Button"
   ]
 }

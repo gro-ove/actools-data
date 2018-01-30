@@ -1,19 +1,21 @@
-//Logitech G29 Driving Force Racing Wheel USB
+// Logitech G29 Driving Force Racing Wheel USB
 {
   "name": "Logitech G29",
-  "axes": {
-    "0": "{ToolsStrings.Controls_Steer}",
-    "1": "{ToolsStrings.Controls_Gas}",
-    "5": "{ToolsStrings.Controls_Brake}",
-    "6": "{ToolsStrings.Controls_Clutch}",
+  "axis": {
+    "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
+    "1": "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "5": "{ToolsStrings.Controls_Brake};Brake Pedal",
+    "6": "{ToolsStrings.Controls_Clutch};Clutch Pedal"
   },
   "buttons": [
     "×", "☐", "○", "△", 
-    "G+", "G−", "R2", "L2",
+    "❯;Right Paddle",
+    "❮;Left Paddle",
+    "R2", "L2",
     "Sh", "Op", "R3", "L3", 
     "G1", "G2", "G3", "G4", 
     "G5", "G6", "GR", "+",
     "−", "↻", "↺", "⏎", 
-    "PS"
+    "PS;PlayStation Button"
   ]
 }

@@ -1,15 +1,16 @@
 // Logitech Driving Force GT
 {
   "name": "Logitech Driving Force GT",
-  "axes": {
-    "0": "{ToolsStrings.Controls_Steer}",
-    "1": "{ToolsStrings.Controls_Gas}",
-    "5": "{ToolsStrings.Controls_Brake}",
+  "axis": {
+    "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
+    "1": "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "5": "{ToolsStrings.Controls_Brake};Brake Pedal"
   },
    "buttons": [
     "×", "☐", "○", "△", 
-    "R1;Right Paddle", "L1;Left Paddle", "R2", "L2", 
-    "SE;Select", "ST;Start", "R3", "L3", 
+    "❯;Right Paddle",
+    "❮;Left Paddle", "R2", "L2", 
+    "SE;Select Button", "ST;Start Button", "R3", "L3", 
     "G+;Gear Shifter Down", "G−;Gear Shifter Up", "⏎;Jogwheel Enter", "+", 
     "»;Jogwheel Right", "«;Jogwheel Left", "−", "H;Horn Button", "PS"
   ]

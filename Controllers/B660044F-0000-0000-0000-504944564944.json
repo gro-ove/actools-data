@@ -1,6 +1,15 @@
 // T500 RS Gear Shift
 {
   "name": "Thrustmaster TH8A",
-  "axes": [],
-  "buttons": 8
+  "axis": 0,
+  "buttons": {
+    "0": "1;Gear 1",
+    "1": "2;Gear 2",
+    "2": "3;Gear 3",
+    "3": "4;Gear 4",
+    "4": "5;Gear 5",
+    "5": "6;Gear 6",
+    "6": "7;Gear 7",
+    "7": "R;Gear R"
+  }
 }

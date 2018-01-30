@@ -1,13 +1,16 @@
 // Logitech G27 Racing Wheel USB
 {
   "name": "Logitech G27",
-  "axes": {
-    "0": "{ToolsStrings.Controls_Steer}",
-    "1": "{ToolsStrings.Controls_Gas}",
-    "5": "{ToolsStrings.Controls_Brake}",
-    "7": "{ToolsStrings.Controls_Clutch}",
+  "axis": {
+    "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
+    "1": "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "5": "{ToolsStrings.Controls_Brake};Brake Pedal",
+    "7": "{ToolsStrings.Controls_Clutch};Clutch Pedal"
   },
   "buttons": [
-    1, 2, 3, 4, "G+;Next gear", "G−;Previous gear", "R1", "L1", "Gear 1", "Gear 2", "Gear 3", "Gear 4", "Gear 5", "Gear 6", "Gear R", "△", "☐", "×", "○", "R2", "L2", "R3", "L3"
+    1, 2, 3, 4, 
+    "❯;Right Paddle",
+    "❮;Left Paddle",
+    "R1", "L1", "Gear 1", "Gear 2", "Gear 3", "Gear 4", "Gear 5", "Gear 6", "Gear R", "△", "☐", "×", "○", "R2", "L2", "R3", "L3"
   ]
 }

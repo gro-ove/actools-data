@@ -3,7 +3,7 @@
 var fs = require('fs');
 var readline = require('readline');
 
-var oo = JSON.parse('' + fs.readFileSync(__dirname + '/Miscellaneous/Years.json'));
+var oo = eval('(' + fs.readFileSync(__dirname + '/Miscellaneous/Years.json') + ')');
 var nn = JSON.parse('' + fs.readFileSync(process.argv[2]));
 
 var co = [];
@@ -26,7 +26,7 @@ combine('tracks');
 combine('showrooms');
 
 function save(){
-  fs.writeFileSync(__dirname + '/Miscellaneous/Years.json', JSON.stringify(oo))
+  fs.writeFileSync(__dirname + '/Miscellaneous/Years.json', JSON.stringify(oo, null, 4).replace('    ', '\t'))
 }
 
 if (co.length > 0){
