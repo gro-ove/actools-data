@@ -1,0 +1,96 @@
+{
+  "x64": {
+    "1.14": { 
+      "offset": 0x273e40, 
+      "original": "b1a22daf22ce49623a2d779b0f224c6381c59c3166b000385127b5bf6522b8e8",
+      "patched": "abb5feccd36f6f1af527a0f135271d88ffc72e1a0cad23aae1d59e35ce4d3f75",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.14.1": { 
+      "offset": 0x274290, 
+      "original": "fb3fe0bb72ddeb98a873b0a3e46efb7c366a4fbe59c3a18baae072eed48388e8",
+      "patched": "5eab91fcdaa0d5d3e55f49010154b98f7b828743df1efa3e7cd6dc137e733482",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.14.2": { 
+      "offset": 0x273f90, 
+      "original": "27b73890099945b9bf597ed28afb322f87f03349d2bd619dab87bbce09e72178",
+      "patched": "164db25ddc7c650e76403b3835eac0304849e7bc6350486df341f8693f991338",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.14.3": { 
+      "offset": 0x274530, 
+      "original": "d7faa332adf9c4b123d0666d9ce0f56e3be06463d84193ba4a03f3216261d85d",
+      "patched": "4e3267c1fb95c896006b8dc357b77438ad70b72cf12490f4b8653d2083640522",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.14.4": { 
+      "offset": 0x273ee0, 
+      "original": "c258a4b22b33fed749e530224b95f2aa8adfdeae2a0c8b894062f2be14010153",
+      "patched": "245e935a356cdc2bb99c6ee007ea76b82bfb78709c8db4da8155db2b80d3d9ca",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.15": { 
+      "offset": 0x20bb60, 
+      "original": "7de3155a014618d6372cd6e309d1cab110cb02b84812f0a7b3adda10f28fa527",
+      "patched": "aa7517e608e84a9575a21c47add8e7fe330a1afad4b800a256a15a56ad0716ea",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.15.1": { 
+      "offset": 0x20bb60, 
+      "original": "0494054b0a4e4010aa4a73ea6a99f1555af888fd81a45f4a272388d9588719b8",
+      "patched": "74b99fa7127baeb7af04bcecf4deeb63dab609dcd26d7d4143be14039603aa1f",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.15.2": { 
+      "offset": 0x20bd40, 
+      "original": "37cea2d7fb63ae85c4452873c0298b6f2dcb11fefbc0c41a7944f31fd825bf6b",
+      "patched": "0a1a4a147e4e50afba5f361040b37f015a2a3752084180e0dad6b8d4e61f497d",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.16": { 
+      "offset": 0x20ca20, 
+      "original": "ddc498ff9b9f8a85b1ab7b803714c5e6483969bf00cb240c0b89f377b985aaa0",
+      "patched": "b2501b16229eb2cbc137a4389b925337e2a62e1143faddad031219ae98815017",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.16.1": { 
+      "offset": 0x20ca20, 
+      "original": "12ff76a2fc02e377cbe2f5e574be8a0abd9b2142f38306dc44c7c431ca9a74b1",
+      "patched": "9fdbf07e9c751069533ff22067d01366acc7c53109454b9f366fb2b4be39b478",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.16.2": { 
+      "offset": 0x20ca20, 
+      "original": "fcbda28dc363b5fdaf26ec02e79d94bd637048b7aa346611e51387646478e398",
+      "patched": "edf87d99a2f4b4d7f9666ed628b6280b1b7672493290033cd266f416ebc61b91",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+    "1.16.3": { 
+      "offset": 0x20caa0, 
+      "original": "ff458820f352faf141e6aafb4bdd85e327d45f51054c7950f224f1ad688c7718",
+      "patched": "6d9b2b9a5e465bba979e201c01957bb124d43006d7a82bf8e914f42f7d52f6d5",
+      "originalOpCode": 0x48,
+      "patchedOpCode": 0xc3 
+    },
+  },
+  "x86": {
+    /*"1.16.3": { 
+      "offset": 0x2F2130, 
+      "original": "14a8bf4146a4dfdd67601e9026de9a3819f45f075134e81349eb94b62d83cbde",
+      "originalOpCode": 0x6a,
+      "patchedOpCode": 0xc3
+    }*/
+  }
+}
