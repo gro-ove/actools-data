@@ -1,0 +1,9 @@
+// FANATEC CSL Elite Pedals LC
+{
+  "name": "Fanatec CSL Elite Pedals LC",
+  "axis": [
+    "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "{ToolsStrings.Controls_Brake};Brake Pedal",
+    "{ToolsStrings.Controls_Clutch};Clutch Pedal"
+  ]
+}
