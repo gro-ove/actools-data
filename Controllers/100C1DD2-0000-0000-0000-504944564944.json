@@ -1,0 +1,9 @@
+// Logitech® G25 Pedals
+{
+  "name": "Logitech G25 Pedals",
+  "axis": {
+    "3": "4;{ToolsStrings.Controls_Gas}",
+    "4": "5;{ToolsStrings.Controls_Brake}",
+    "5": "6;{ToolsStrings.Controls_Clutch}"
+  }
+}
