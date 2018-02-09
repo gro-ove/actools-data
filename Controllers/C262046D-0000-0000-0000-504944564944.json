@@ -1,0 +1,33 @@
+// Logitech G920 Driving Force Racing Wheel USB
+{
+  "name": "Logitech G920",
+  "axis": {
+    "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
+    "1": "{ToolsStrings.Controls_Gas};Gas Pedal",
+    "6": "{ToolsStrings.Controls_Brake};Brake Pedal",
+    "7": "{ToolsStrings.Controls_Clutch};Clutch Pedal"
+  },
+  "pov": [
+    "P"
+  ],
+  "buttons": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18"
+  ]
+}
