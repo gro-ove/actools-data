@@ -23,6 +23,12 @@
     "icon": "RSS.png"
   },
   { 
+    "name": "AssettoDrive.net", 
+    "description": "Cars from AssettoDrive.net", 
+    "filter": "id:`^ad_`",
+    "icon": "AD.png"
+  },
+  { 
     "name": "Mods", 
     "description": "Cars not made by Kunos", 
     "filter": "!author:Kunos",
