@@ -4,8 +4,8 @@
   "axis": {
     "0": "{ToolsStrings.Controls_Steer};Steering Wheel",
     "1": "{ToolsStrings.Controls_Brake};Brake Pedal",
-    "5": "{ToolsStrings.Controls_Gas};Gas Pedal",
-    "6": "{ToolsStrings.Controls_Clutch};Clutch Pedal"
+    "5": "{ToolsStrings.Controls_Clutch};Clutch Pedal",
+    "6": "{ToolsStrings.Controls_Gas};Gas Pedal"
   },
   "pov": [
     "P"
