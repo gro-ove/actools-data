@@ -1,0 +1,32 @@
+// USB Vibration Joystick (BM)
+{
+  "name": "USB Vibration Joystick (BM)",
+  "axis": [
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel",
+    "Steer;Steering wheel"
+  ],
+  "pov": [
+    "PR;POV right"
+  ],
+  "buttons": [
+    "△",
+    "☐",
+    "×",
+    "○",
+    "L1",
+    "R1",
+    "R1",
+    "R2",
+    "SE;Select button",
+    "ST;Start button",
+    "11",
+    "12",
+    "13"
+  ]
+}
