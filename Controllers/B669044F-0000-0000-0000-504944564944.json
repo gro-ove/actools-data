@@ -1,6 +1,6 @@
 // Thrustmaster TX Racing Wheel
 {
-  "name": "Thrustmaster TX 458 Italia Rim",
+  "name": "Thrustmaster TX",
   "axis": [
     "{ToolsStrings.Controls_Steer};{ToolsStrings.Controls_SteeringWheel}",
     "2",
