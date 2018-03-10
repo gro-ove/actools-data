@@ -25,7 +25,7 @@
   { 
     "name": "AssettoDrive.net", 
     "description": "Cars from AssettoDrive.net", 
-    "filter": "id:`^ad_`",
+    "filter": "AssettoDrive.net | `\\bShowmebest\\b`",
     "icon": "AD.png"
   },
   { 
