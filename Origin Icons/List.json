@@ -25,6 +25,11 @@
     "authorFilter": "AssettoDrive.net | `\\bShowmebest\\b`",
     "icon": "AD.png"
   },
+  {
+    "name": "DRM Modding Team",
+    "authorFilter": "DRM Modding Team",
+    "icon": "DRM.png"
+  },
   { 
     "name": "BZ SimWorks", 
     "authorFilter": "`\\b(?:Beto FR|BZ Simworks|ZorroGSI)\\b`",
