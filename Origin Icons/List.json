@@ -25,15 +25,25 @@
     "authorFilter": "AssettoDrive.net | `\\bShowmebest\\b`",
     "icon": "AD.png"
   },
+  { 
+    "name": "BZ SimWorks", 
+    "authorFilter": "`\\b(?:Beto FR|BZ Simworks|ZorroGSI)\\b`",
+    "icon": "BZ.png"
+  },
+  {
+    "name": "Dareks’ Car Mods",
+    "authorFilter": "\"Dareks's Car Mods Assetto Corsa\"",
+    "icon": "DRKS.png"
+  },
   {
     "name": "DRM Modding Team",
     "authorFilter": "DRM Modding Team",
     "icon": "DRM.png"
   },
   { 
-    "name": "BZ SimWorks", 
-    "authorFilter": "`\\b(?:Beto FR|BZ Simworks|ZorroGSI)\\b`",
-    "icon": "BZ.png"
+    "name": "Fat-Alfie", 
+    "authorFilter": "\"Fat-Alfie\"",
+    "icon": "Fat-Alfie.png"
   },
   { 
     "name": "Race Sim Studio", 
