@@ -32,6 +32,11 @@
     "icon": "AD.png"
   },
   { 
+    "name": "Ben O’Bro", 
+    "authorFilter": "`\\bben\\b` & `\\bbro\\b`",
+    "icon": "OBRO.png"
+  },
+  { 
     "name": "BZ SimWorks", 
     "authorFilter": "`\\b(?:Beto FR|BZ Simworks|ZorroGSI)\\b`",
     "icon": "BZ.png"
@@ -56,6 +61,12 @@
     "name": "Fat-Alfie", 
     "authorFilter": "\"Fat-Alfie\"",
     "icon": "Fat-Alfie.png"
+  },
+  { 
+    "name": "IER Simulations", 
+    "description": "International Endurance Racing", 
+    "authorFilter": "`\\bIER\\b`",
+    "icon": "IER.png"
   },
   { 
     "name": "Race Sim Studio", 
