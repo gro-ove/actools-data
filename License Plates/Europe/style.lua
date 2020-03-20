@@ -24,30 +24,40 @@ function cs_Netherlands(prefix, number, postfix)
   allowed = 'BDFGHJKLNPRSTVXZ'
 
   for c in forbidden:gmatch'.' do
-    prefix = prefix:gsub(c, function(c) 
+    prefix = prefix:gsub(c, function(c)
       random = math.random(1, #allowed)
-      return allowed:sub(random, random) 
+      return allowed:sub(random, random)
     end)
-    
-    postfix = postfix:gsub(c, function(c) 
+
+    postfix = postfix:gsub(c, function(c)
       random = math.random(1, #allowed)
-      return allowed:sub(random, random) 
+      return allowed:sub(random, random)
     end)
   end
 
-  text.font = 'kenteken.ttf'  
+  text.font = 'kenteken.ttf'
   text.size = 150
 
   textValue = number:sub(1, 2) .. '-' .. prefix .. '-' .. postfix
 
   -- let’s make sure text fits
-  for i = 1, 10 do    
+  for i = 1, 10 do
     size = measureText(textValue, 0, 0)
     if size.x > 800 then text.kerning = text.kerning - 1 else break end
   end
 
   -- draw text
   drawText(textValue, 162, 6, Gravity.West)
+end
+
+function cs_Lithuania(prefix, number, postfix)
+  text.font = 'din1451alt.ttf'
+  text.size = 200
+
+  textValue = prefix .. ' ' .. number
+
+  -- draw text
+  drawText(textValue, 162, 6, Gravity.Center)
 end
 
 return function(country, prefix, number, postfix)
@@ -67,7 +77,7 @@ return function(country, prefix, number, postfix)
   end
 
   plate.light = -90  -- set to 203 to match Kunos textures with diagonal lighting
-  
+
   -- text params
   text.color = '#473e29'
   text.weight = FontWeight.Normal
@@ -76,11 +86,13 @@ return function(country, prefix, number, postfix)
 
   if country == 'Netherlands' then
     cs_Netherlands(prefix, postfix, number)
+  elseif country == "Lithuania" then
+    cs_Lithuania(prefix, postfix, number)
   else
     text.font = 'common.ttf'
     text.size = 210
 
     -- draw text
     drawText(prefix .. ' ' .. number .. ' ' .. postfix, 162, 14, Gravity.West)
-  end  
+  end
 end
