@@ -1,0 +1,83 @@
+[
+    {
+        "name": "Same brand & class",
+        "filter": "k+",
+        "script": "strutils.equals_i(selected.Brand, tested.Brand) and strutils.equals_i(selected.CarClass, tested.CarClass)"
+    },
+    {
+        "name": "Same era & class",
+        "filter": "k+",
+        "script": "
+            local year = selected.Year
+            if year == nil then
+                error('Selected car doesn’t have year')
+            end
+
+            return function(tested) 
+                return year ~= nil and tested.Year ~= nil and math.abs(year - tested.Year) < 10 and 
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "Similar P/W ratio",
+        "filter": "k+",
+        /* only 5% difference */
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.05 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "Same subclass only",
+        "filter": "k+",
+        "script": "
+            local subclass = selected.Tags:FirstOrDefault(function (x) return string.sub(x, 1, 1) == '#' end)
+            if subclass == nil then
+                error('Selected car doesn’t have subclass')
+            end
+
+            return function(tested) 
+                return tested.Tags:Contains(subclass)
+            end"
+    },
+    {
+        "name": "Same racing class (GT3/GT2/…)",
+        "filter": "class:race & k+",
+        "script": "
+            -- tags to search for
+            classes = { 'gt3', 'gt2', '#GT4', '#90s touring' }
+
+            -- try to find some tag in selected car
+            racingclass = nil
+            for i, cl in ipairs(classes) do
+                if selected.Tags:ContainsIgnoringCase(cl) then
+                    racingclass = cl
+                    break
+                end
+            end
+
+            -- logging
+            if racingclass ~= nil then 
+                log('selected class: ' .. racingclass)
+            else
+                log('selected class: NIL')
+            end
+
+            -- in case there is no any tag at all, result is false
+            if racingclass == nil then 
+                error('Can’t detect selected car’s racing class')
+                return false
+            end
+
+            -- result function which will try to find that tag in any tested car
+            return function(tested)
+                return tested.Tags:ContainsIgnoringCase(racingclass)
+            end"
+    }
+]

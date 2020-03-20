@@ -1,0 +1,59 @@
+[
+    {
+        "name": "3% Tolerance",
+        "script": "
+            local bhp = numutils.numvalue(selected.SpecsBhp)
+            if bhp == 0 then
+                error('Selected car doesn’t have maximum power amount in its specs')
+            end
+
+            return function(tested) 
+                local testedBhp = numutils.numvalue(tested.SpecsBhp)
+
+                return 
+                        -- BHP differs less than 3%:
+                        math.abs(bhp - testedBhp) < bhp * 0.03 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "5% Tolerance",
+        "script": "
+            local bhp = numutils.numvalue(selected.SpecsBhp)
+            if bhp == 0 then
+                error('Selected car doesn’t have maximum power amount in its specs')
+            end
+
+            return function(tested) 
+                local testedBhp = numutils.numvalue(tested.SpecsBhp)
+
+                return 
+                        -- BHP differs less than 5%:
+                        math.abs(bhp - testedBhp) < bhp * 0.05 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "7% Tolerance",
+        "script": "
+            local bhp = numutils.numvalue(selected.SpecsBhp)
+            if bhp == 0 then
+                error('Selected car doesn’t have maximum power amount in its specs')
+            end
+
+            return function(tested) 
+                local testedBhp = numutils.numvalue(tested.SpecsBhp)
+
+                return 
+                        -- BHP differs less than 7%:
+                        math.abs(bhp - testedBhp) < bhp * 0.07 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    }
+]

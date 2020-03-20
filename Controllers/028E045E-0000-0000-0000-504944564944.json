@@ -1,24 +1,26 @@
-// Controller (XBOX 360 For Windows)
+// Controller (Gamepad F310)
 {
   "name": "Xbox 360",
   "axis": {
-    "0": "LH;Left stick, horizontal axis",
-    "1": "LV;Left stick, vertical axis",
-    "2": "L2/R2",
-    "3": "RH;Right stick, horizontal axis",
-    "4": "RV;Right stick, vertical axis"
+    "0": "LH;Left Stick, Horizontal Axis",
+    "1": "LV;Left Stick, Vertical Axis",
+    "2": "LT/RT;L2/R2",
+    "3": "RH;Right Stick, Horizontal Axis",
+    "4": "RV;Right Stick, Vertical Axis"
   },
   "pov": [
     "P"
   ],
-  "buttons": {
-    "0": "×",
-    "1": "○",
-    "2": "☐",
-    "3": "△",
-    "4": "L1",
-    "5": "R1",
-    "6": "SE;Select Button",
-    "7": "ST;Start Button"
-  }
+  "buttons": [
+    "A",
+    "B",
+    "X",
+    "Y",
+    "LB",
+    "RB",
+    "SE;Select Button",
+    "ST;Start Button",
+    "LS;Left Stick Button",
+    "RS;Right Stick Button"
+  ]
 }

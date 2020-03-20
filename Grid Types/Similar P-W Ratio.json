@@ -1,0 +1,82 @@
+[
+    {
+        "name": "2% Tolerance",
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.02 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "3% Tolerance",
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.03 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "4% Tolerance",
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.04 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "id": "similar_p_w_ratio",
+        "name": "5% Tolerance",
+        /* only 5% difference */
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.05 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "6% Tolerance",
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.06 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "7% Tolerance",
+        "script": "
+            local selectedPwRatio = numutils.numvalue(selected.SpecsPwRatio)
+            if selectedPwRatio == 0 then
+                error('Selected car doesn’t have P/W ratio in its specs')
+            end
+
+            return function(tested) 
+                local testedPwRatio = numutils.numvalue(tested.SpecsPwRatio)
+                return math.abs(selectedPwRatio - testedPwRatio) < selectedPwRatio * 0.07 and strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    }
+]

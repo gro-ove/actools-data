@@ -2,12 +2,12 @@
     {
         "id": "online",
         "name": "Online",
-        "script": "race['REMOTE']['ACTIVE']"
+        "script": "race['REMOTE'].GetBool('ACTIVE', false)"
     },
     {
         "id": "replay",
         "name": "Replay",
-        "script": "race['REPLAY']['ACTIVE']"
+        "script": "race['REPLAY'].GetBool('ACTIVE', false)"
     },
     {
         "id": "hotlap",
