@@ -81,6 +81,12 @@
     "icon": "IER.png"
   },
   { 
+    "name": "PM3DM", 
+    "description": "Cars made by PM3DM", 
+    "authorFilter": "PM3DM",
+    "icon": "PM3DM.png"
+  },
+  { 
     "name": "Race Sim Studio", 
     "authorFilter": "Race Sim Studio",
     "icon": "RSS.png"

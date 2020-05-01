@@ -1,0 +1,53 @@
+[
+    {
+        "name": "3 Yrs Tolerance",
+        "script": "
+            local year = selected.Year
+            if year == nil then
+                error('Selected car doesn’t have year')
+            end
+
+            return function(tested) 
+                return 
+                        -- Year differs less or equal to 3:
+                        tested.Year ~= nil and math.abs(year - tested.Year) <= 3 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "5 Yrs Tolerance",
+        "script": "
+            local year = selected.Year
+            if year == nil then
+                error('Selected car doesn’t have year')
+            end
+
+            return function(tested) 
+                return 
+                        -- Year differs less or equal to 5:
+                        tested.Year ~= nil and math.abs(year - tested.Year) <= 5 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    },
+    {
+        "name": "7 Yrs Tolerance",
+        "script": "
+            local year = selected.Year
+            if year == nil then
+                error('Selected car doesn’t have year')
+            end
+
+            return function(tested) 
+                return 
+                        -- Year differs less or equal to 7:
+                        tested.Year ~= nil and math.abs(year - tested.Year) <= 7 and 
+
+                        -- Same car class (street/race)
+                        strutils.equals_i(selected.CarClass, tested.CarClass)
+            end"
+    }
+]

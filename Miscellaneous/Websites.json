@@ -35,4 +35,10 @@
     "paidOnly": false,
     "driftingOnly": false,
   },
+  "asrformula.com": {
+    "data": "dYsxDsIwDAD3vIIPOCbdysbCA+ABKCSFIjW2lThyn08QM8Mtp7tVVdoJ0cx8bPXJtfQt+sQF3fl2PVx+wq3/OxNITLqQYpeNY244HcOMIWCqLLJkGMf9PSII87QPvNDL+cYlE2Q2+l7w6KpMHw",
+    "originalOnly": true,
+    "paidOnly": false,
+    "driftingOnly": false,
+  },
 }
