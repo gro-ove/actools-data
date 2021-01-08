@@ -58,6 +58,16 @@
     "icon": "DRM.png"
   },
   { 
+    "name": "Fat-Alfie", 
+    "authorFilter": "\"Fat-Alfie\"",
+    "icon": "Fat-Alfie.png"
+  },
+  { 
+    "name": "Fazani", 
+    "authorFilter": "\"Fazani\"",
+    "icon": "Fazani.png"
+  },
+  { 
     "name": "Gary Paterson", 
     "description": "Cars made by Gary Paterson", 
     "authorFilter": "\"Gary Paterson\"",
@@ -70,9 +80,10 @@
     "icon": "path:M 0.00 0.00 L 512.00 0.00 L 512.00 150.60 C 387.54 113.95 263.07 77.38 138.60 40.77 C 92.38 197.84 46.19 354.91 0.01 511.99 C 139.55 470.97 279.09 429.93 418.62 388.88 C 398.68 362.58 378.72 336.28 358.79 309.96 C 409.86 309.94 460.93 309.96 512.00 309.96 L 512.00 512.00 L 0.00 512.00 L 0.00 0.00 Z"
   },
   { 
-    "name": "Fat-Alfie", 
-    "authorFilter": "\"Fat-Alfie\"",
-    "icon": "Fat-Alfie.png"
+    "name": "HTRacingS", 
+    "description": "HTRacingS", 
+    "authorFilter": "`\\bHTRacingS\\b`",
+    "icon": "HTR.png"
   },
   { 
     "name": "IER Simulations", 
@@ -95,6 +106,11 @@
     "name": "Race Sim Studio", 
     "authorFilter": "Race Sim Studio",
     "icon": "RSS.png"
+  },
+  { 
+    "name": "Reboot Team", 
+    "authorFilter": "Reboot Team",
+    "icon": "RT.png"
   },
   { 
     "name": "Virtual Racing Cars", 

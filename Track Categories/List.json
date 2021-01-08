@@ -11,8 +11,13 @@
     "name": "Fat-Alfie", 
     "description": "Tracks made by Fat-Alfie", 
     "filter": "author:\"Fat-Alfie\"",
-    // "icon": "text:ACC",
     "icon": "Fat-Alfie.png"
+  },
+  { 
+    "name": "Reboot Team", 
+    "description": "Tracks made by Reboot Team", 
+    "filter": "author:\"Reboot Team\"",
+    "icon": "RT.png"
   },
   { 
     "name": "Mods", 
