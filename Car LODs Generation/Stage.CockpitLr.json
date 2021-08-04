@@ -1,0 +1,44 @@
+{
+  "name": "Low-res cockpit",
+  "modelName": "LOD_0/FILE",
+  "config": "[COCKPIT_HR]\nDISTANCE_SWITCH=7",
+  "separatePriorityGroups": true,
+  "applyWeldingFix": true,
+  "inlineNodeGeneration": {
+    "source": "COCKPIT_HR",
+    "destination": "COCKPIT_LR",
+    "description": "Cockpit"
+  },
+  "rename": [
+    { "element": "parent:COCKPIT_LR & STEER_HR", "renameTo": "STEER_LR" }
+  ],
+  "triangles": {
+    "default": 7000,
+    "recommended": { "min": 7000, "max": 10000 }
+  },
+  "mergeExceptions": [
+    "$Lights",
+    "$Mirrors",
+    "DAMAGE_GLASS_*"
+  ],
+  "mergeParents": [
+    "COCKPIT_HR",
+    "STEER_HR"
+  ],
+  "elementsToRemove": [
+    "$AnalogInstruments",
+    "$BrokenGlass",
+    "$ExtraRotating",
+    "$LightAnimation",
+    "$RemoveCompletely",
+    "$TransparentMeshes",
+    "COCKPIT_LR",
+    "aabbSize<0.05"
+  ],
+  "elementsPriorities": [
+    { "elements": "$MoreImportantMeshes", "priority": 1.5 },
+    { "elements": "$LessImportantMeshes", "priority": 0.5 },
+    { "elements": "STEER_HR", "priority": 1.5 },
+    { "elements": "aabbRelMaxY<0.6", "priority": 0.5 }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "name": "LOD C",
+  "modelName": "LOD_2/FILE",
+  "config": "[LOD_2]\nIN=45\nOUT=201\nFILE={0}_lod_c.kn5",
+  "separatePriorityGroups": true,
+  "applyWeldingFix": true,
+  "rename": [
+    { "element": "COCKPIT_HR", "renameTo": "COCKPIT_LR" },
+    { "element": "STEER_HR", "renameTo": "STEER_LR" }
+  ],
+  "triangles": {
+    "default": 15000,
+    "recommended": { "min": 12000, "max": 14000 }
+  },
+  "mergeExceptions": [
+    "$Lights"
+  ],
+  "mergeParents": [
+    "$LightAnimation",
+    "$Wheels",
+    "REAR_AXLE",
+    "COCKPIT_HR"
+  ],
+  "mergeAsBlack": [
+    "$BottomMeshes"
+  ],
+  "elementsToRemove": [
+    "$AnalogInstruments",
+    "$RimsBlurred",
+    "$Brakes",
+    "$BrokenGlass",
+    "$ExtraRotating",
+    "$InteriorExtras",
+    "$RemoveCompletely",
+    "$BrakesMeshes",
+    "$SuspensionMeshes",
+    "$InteriorMeshes & ( $ExtraRotating, $Lights, $LightAnimation, $Mirrors, $TransparentMeshes )",
+    "COCKPIT_LR",
+    "aabbSize<0.1"
+  ],
+  "emptyNodesToKeep": [
+    "$ImportantNodes"
+  ],
+  "elementsPriorities": [
+    { "elements": "$LessImportantMeshes", "priority": 0.1 },
+    { "elements": "$MoreImportantMeshes", "priority": 1.2 },
+    { "elements": "$InteriorMeshes", "priority": 0.1 },
+    { "elements": "$CarPaint, $Stickers", "priority": 1.2 },
+    { "elements": "$BottomMeshes", "priority": 0.1 }
+  ],
+  "offsetsAlongNormal": [
+    { "elements": "$Stickers", "priority": 0.01 }
+  ]
+}

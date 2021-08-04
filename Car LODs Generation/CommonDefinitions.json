@@ -1,0 +1,81 @@
+{
+  "userDefined": {
+    "CAR_PAINT": {
+      "name": "Car paint meshes",
+      "description": "Car paint meshes would get less distorted and keep their material for LOD D",
+      "default": "shader:*_damage_dirt, texture:car_paint.dds"
+    },
+    "STICKER_MESHES": {
+      "name": "Stickers",
+      "description": "Will get a bit of an offset to make sure they wouldn’t clip through car paint",
+      "default": ""
+    },
+    "INTERIOR_MESHES": {
+      "name": "Interior meshes",
+      "description": "If COCKPIT_HR is not set correctly, you can list interior meshes here, but I highly advise to add COCKPIT_HR properly instead",
+      "default": "parent:COCKPIT_HR"
+    },
+    "REMOVE_COMPLETELY": {
+      "name": "Remove completely",
+      "description": "Maybe your car has modelled engine under the bonnet, or some suspension details nobody is going to see from the distance? List them all here to greatly improve resulting quality",
+      "default": ""
+    },
+    "LESS_IMPORTANT": {
+      "name": "Less important meshes",
+      "description": "List less important meshes here so they would get fewer triangles, improving quality of everything else",
+      "default": "REAR_AXLE"
+    },
+    "MORE_IMPORTANT": {
+      "name": "More important meshes",
+      "description": "List more important meshes here so they would get more triangles, although reducing quality of everything else",
+      "default": "$LicensePlate"
+    }
+  },
+  "elements": {
+    "$AnalogInstruments": "ARROW_*, @:analog_instruments.ini/*/OBJECT_NAME",
+    "$BottomMeshes": "mesh:yes & aabbRelMaxY<0.5 & aabbRelMinX>-0.75 & aabbRelMaxX<0.75 & aabbRelMinZ>0.25 & aabbRelMaxZ<0.75",
+    "$Brakes": "DISC_LF, DISC_RF, DISC_LR, DISC_RR",
+    "$BrakesMeshes": "parent:$Brakes, shader:ksBrakeDisc",
+    "$BrokenGlass": "DAMAGE_GLASS_*",
+    "$CarPaint": "@:userDefined/CAR_PAINT",
+    "$DigitalInstruments": "@:digital_instruments.ini/*/OBJECT_NAME",
+    "$ExtraRotating": "@:extra_animations.ini/ROTATING_OBJECT_*/NAME",
+    "$GlowingBrakeDiscs": "@:brakes.ini/DISCS_GRAPHICS/DISC_*",
+    "$ImportantNodes": "$Wheels, $Suspension, $Brakes",
+    "$InteriorExtras": "CINTURE_*, STEER_*, SHIFT_*",
+    "$InteriorMeshes": "@:userDefined/INTERIOR_MESHES, $InteriorExtras",
+    "$LessImportantMeshes": "@:userDefined/LESS_IMPORTANT",
+    "$LicensePlate": "texture:Plate_D.dds & texture:Plate_NM.dds",
+    "$LightAnimation": "@:lights.ksanim & ! $InteriorMeshes",
+    "$Lights": "@:lights.ini/LIGHT_*/NAME, @:lights.ini/BRAKE_*/NAME",
+    "$Mirrors": "@:mirrors.ini/MIRROR_*/NAME",
+    "$MoreImportantMeshes": "@:userDefined/MORE_IMPORTANT",
+    "$RemoveCompletely": "@:userDefined/REMOVE_COMPLETELY",
+    "$RimsAll": "@:blurred_objects.ini/OBJECT_*/NAME",
+    "$RimsBlurred": "@:blurred_objects.ini/OBJECT_*[MIN_SPEED>0]/NAME",
+    "$RimsStatic": "@:blurred_objects.ini/OBJECT_*[MIN_SPEED=0]/NAME",
+    "$Stickers": "@:userDefined/STICKER_MESHES",
+    "$Suspension": "SUSP_LF, SUSP_RF, SUSP_LR, SUSP_RR",
+    "$SuspensionMeshes": "mesh:yes & parent:$Suspension & !parent:$Wheels",
+    "$TransparentMeshes": "mesh:yes & ( transparent:yes, visible:no, materialBlendMode:alphaBlend )",
+    "$Tyres": "shader:ksTyres",
+    "$VisualDamage": "@:damage.ini/VISUAL_OBJECT_*/NAME",
+    "$WheelMeshes": "mesh:yes & parent:$Wheels",
+    "$Wheels": "WHEEL_LF, WHEEL_RF, WHEEL_LR, WHEEL_RR"
+  },
+  "issueChecks": [
+    { "name": "Couldn’t find any car paint meshes", "filter": "$CarPaint", "trigger": "meshes:0" },
+    { "name": "Couldn’t find any interior meshes", "filter": "@:userDefined/INTERIOR_MESHES", "trigger": "meshes:0" },
+    { "name": "Suspiciously few car paint triangles", "filter": "$CarPaint", "trigger": "meshes>0 & triangles<5000" },
+    { "name": "Suspiciously few interior triangles", "filter": "@:userDefined/INTERIOR_MESHES", "trigger": "meshes>0 & triangles<7000" },
+    { "name": "Suspiciously many car paint materials (could be a false positive)", "filter": "$CarPaint", "trigger": "materials>2" }
+  ],
+  "statGroups": [
+    { "name": "Hi-res cockpit", "filter": "COCKPIT_HR" },
+    { "name": "Low-res cockpit", "filter": "COCKPIT_LR" },
+    { "name": "Wheels", "filter": "$Wheels" },
+    { "name": "Suspension", "filter": "$Suspension" },
+    { "name": "Car paint", "filter": "$CarPaint" },
+    { "name": "Transparent", "filter": "transparent:yes" }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "Settings": {
+    "ReductionProcessor": {
+      "ReductionSettings": {        
+        "ReductionHeuristics": 0,
+        "ReductionTargetStopCondition": 0,
+        "ReductionTargetTriangleRatioEnabled": false, "ReductionTargetTriangleRatio": 0.15,
+        "ReductionTargetTriangleCountEnabled": true, "ReductionTargetTriangleCount": 14000,
+        "ReductionTargetMaxDeviationEnabled": false, "ReductionTargetMaxDeviation": 1.0,
+        "ReductionTargetOnScreenSizeEnabled": false, "ReductionTargetOnScreenSize": 50,
+
+        "GeometryImportance": 3.0,
+        "TextureImportance": 2.0,
+        "ShadingImportance": 2.0,
+        "GroupImportance": 0.0,
+        "MaterialImportance": 0.0,
+        "CurvatureImportance": 0.0,
+        "VertexColorImportance": 0.0,
+        "SkinningImportance": 0.0,
+        "EdgeSetImportance": 0.0,
+
+        "AllowDegenerateTexCoords": false,
+        "CreateGeomorphGeometry": false,
+        "DataCreationPreferences": 2,
+        "UseHighQualityNormalCalculation": true,
+        "MergeGeometries": false,
+        "LockGeometricBorder": false,
+        "OutwardMoveMultiplier": 1.0,
+        "InwardMoveMultiplier": 1.0,
+
+        "KeepSymmetry": false,
+        "UseAutomaticSymmetryDetection": false,
+        "UseSymmetryQuadRetriangulator": false,
+        "SymmetryAxis": 1,
+        "SymmetryOffset": 0.0,
+        "SymmetryDetectionTolerance": 0.0004
+      },
+      "RepairSettings": {
+        "UseTJunctionRemover": false,
+        "UseWelding": false,
+        "TJuncDist": 0,
+        "WeldDist": 0,
+        "WeldOnlyBorderVertices": true,
+        "WeldOnlyWithinMaterial": false,
+        "WeldOnlyWithinSceneNode": false,
+        "WeldOnlyBetweenSceneNodes": false,
+        "ProgressivePasses": 3
+      },
+      "VisibilitySettings": {
+        "UseVisibilityWeightsInReducer": false,
+        "UseVisibilityWeightsInTexcoordGenerator": false,
+        "VisibilityWeightsPower": 10.0,
+        "CullOccludedGeometry": false,
+        "ForceVisibilityCalculation": false,
+        "UseBackfaceCulling": true,
+        "CameraSelectionSetName": "",
+        "OccluderSelectionSetName": "",
+        "FillNonVisibleAreaThreshold": 0.0,
+        "RemoveTrianglesNotOccludingOtherTriangles": false,
+        "ConservativeMode": false,
+        "ComputeVisibilityMode": 0
+      },
+      "NormalCalculationSettings": {
+        "ReplaceNormals": false,
+        "ReplaceTangents": false,
+        "HardEdgeAngle": 160.0,
+        "RepairInvalidNormals": true,
+        "ReorthogonalizeTangentSpace": true,
+        "ScaleByArea": true,
+        "ScaleByAngle": true,
+        "SnapNormalsToFlatSurfaces": false
+      },
+      "VertexWeightSettings": { "UseVertexWeightsInReducer": false },
+      "BoneSettings": { "UseBoneReducer": false },
+      "MappingImageSettings": { "GenerateMappingImage": false }
+    }
+  },
+  "Pipeline": "Reduction"
+}

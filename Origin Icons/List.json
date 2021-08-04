@@ -68,6 +68,11 @@
     "icon": "Fazani.png"
   },
   { 
+    "name": "First Studio Race", 
+    "authorFilter": "\"First Studio Race\"",
+    "icon": "FSR.png"
+  },
+  { 
     "name": "Gary Paterson", 
     "description": "Cars made by Gary Paterson", 
     "authorFilter": "\"Gary Paterson\"",
