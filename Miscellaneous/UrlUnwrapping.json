@@ -1,0 +1,4 @@
+[
+  { "urlIncludes": "vk.com/away.php", "queryParameter": "to" },
+  { "urlIncludes": "l.facebook.com/l.php", "queryParameter": "u" }
+]

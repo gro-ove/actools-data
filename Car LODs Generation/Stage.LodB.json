@@ -29,6 +29,7 @@
     "REAR_AXLE",
     "COCKPIT_HR"
   ],
+  "mergeAsBlack": [],
   "elementsToRemove": [
     "$InteriorMeshes & ( $ExtraRotating, $LightAnimation, $Mirrors, $TransparentMeshes )",
     "$RemoveCompletely",

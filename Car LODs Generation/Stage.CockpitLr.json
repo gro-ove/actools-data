@@ -25,6 +25,7 @@
     "COCKPIT_HR",
     "STEER_HR"
   ],
+  "mergeAsBlack": [],
   "elementsToRemove": [
     "$AnalogInstruments",
     "$BrokenGlass",
