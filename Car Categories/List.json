@@ -122,6 +122,12 @@
     "icon": "RSS.png"
   },
   { 
+    "name": "TM-Modding", 
+    "description": "Cars made by TM-Modding", 
+    "filter": "author:TM-Modding",
+    "icon": "TMM.png"
+  },
+  { 
     "name": "VRC Team", 
     "description": "Virtual Racing Cars", 
     "filter": "author:VRC",

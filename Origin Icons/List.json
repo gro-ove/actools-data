@@ -124,6 +124,11 @@
     "icon": "RT.png"
   },
   { 
+    "name": "TM-Modding", 
+    "authorFilter": "TM-Modding",
+    "icon": "TMM.png"
+  },
+  { 
     "name": "Virtual Racing Cars", 
     "description": "Virtual Racing Cars", 
     "authorFilter": "VRC",
