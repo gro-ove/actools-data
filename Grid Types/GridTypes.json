@@ -80,5 +80,121 @@
             return function(tested)
                 return tested.Tags:ContainsIgnoringCase(racingclass)
             end"
+    },
+    {
+        "id": "same_category_any_car",
+        "name": "Same category (any car)",
+        "script": "
+            -- Detects the racing category of the selected car from its tags and picks cars of the
+            -- same category. Works with Kunos cars and mods alike: case and # are ignored, so GT3,
+            -- gt3 and #GT3 are the same thing, and tags like 'f1 2025' count as 'f1'.
+
+            local function norm(s)
+                s = string.lower(s or '')
+                s = string.gsub(s, '^%s*#?%s*', '')
+                return (string.gsub(s, '%s+$', ''))
+            end
+
+            local function tagsOf(car)
+                local list = {}
+                car.Tags:FirstOrDefault(function (x)
+                    list[#list + 1] = { raw = x, n = norm(x) }
+                    return false
+                end)
+                return list
+            end
+
+            -- 1) Known categories, by priority. A tag belongs to a category if it equals it or
+            --    starts with it followed by a space.
+            local known = {
+                'gt3', 'gt2', 'gte', 'gt4', 'gt1', 'lmp1', 'lmp2', 'lmp3', 'lmh', 'lmdh', 'hypercar',
+                'f1', 'formula 1', 'f2', 'f3', 'f4', 'formula e', 'indycar', 'nascar',
+                'dtm', 'tcr', '90s touring', 'prototype c', 'group c', 'rally', 'drift'
+            }
+
+            local function knownCategory(tags)
+                for _, k in ipairs(known) do
+                    for _, t in ipairs(tags) do
+                        if t.n == k or string.sub(t.n, 1, #k + 1) == k .. ' ' then return k end
+                    end
+                end
+                return nil
+            end
+
+            -- 2) No known category: compare sets of meaningful tags (ignoring drivetrain,
+            --    gearbox, country, years, # subclasses and such).
+            local generic = {
+                ['race'] = 1, ['street'] = 1, ['rwd'] = 1, ['awd'] = 1, ['fwd'] = 1, ['4wd'] = 1,
+                ['manual'] = 1, ['sequential'] = 1, ['semiautomatic'] = 1, ['automatic'] = 1,
+                ['turbo'] = 1, ['compressor'] = 1, ['supercharged'] = 1, ['v8'] = 1, ['v12'] = 1,
+                ['rotary'] = 1, ['hybrid'] = 1, ['electric'] = 1, ['lightweight'] = 1, ['trackday'] = 1,
+                ['gt'] = 1, ['supercar'] = 1, ['italy'] = 1, ['germany'] = 1, ['japan'] = 1,
+                ['usa'] = 1, ['great britain'] = 1, ['united kingdom'] = 1, ['uk'] = 1, ['france'] = 1,
+                ['austria'] = 1, ['sweden'] = 1, ['spain'] = 1, ['netherlands'] = 1, ['australia'] = 1,
+                ['south korea'] = 1, ['korea'] = 1, ['china'] = 1, ['czech republic'] = 1, ['belgium'] = 1
+            }
+
+            local function significant(tags)
+                local set, count = {}, 0
+                for _, t in ipairs(tags) do
+                    local isSubclass = string.sub(t.raw, 1, 1) == '#'
+                    if not isSubclass and generic[t.n] == nil and not string.match(t.n, '^%d+$') and t.n ~= '' then
+                        if set[t.n] == nil then count = count + 1 end
+                        set[t.n] = 1
+                    end
+                end
+                return set, count
+            end
+
+            local function sameSet(a, b)
+                for k in pairs(a) do if b[k] == nil then return false end end
+                for k in pairs(b) do if a[k] == nil then return false end end
+                return true
+            end
+
+            local function subclassOf(tags)
+                for _, t in ipairs(tags) do
+                    if string.sub(t.raw, 1, 1) == '#' then return t.n end
+                end
+                return nil
+            end
+
+            local selectedClass = selected.CarClass
+            local selectedTags = tagsOf(selected)
+            local category = knownCategory(selectedTags)
+
+            if category ~= nil then
+                log('category: ' .. category)
+                return function(tested)
+                    return strutils.equals_i(selectedClass, tested.CarClass) and knownCategory(tagsOf(tested)) == category
+                end
+            end
+
+            local sigSet, sigCount = significant(selectedTags)
+            if sigCount > 0 then
+                log('no known category, comparing meaningful tags')
+                return function(tested)
+                    if not strutils.equals_i(selectedClass, tested.CarClass) then return false end
+                    local testedTags = tagsOf(tested)
+                    if knownCategory(testedTags) ~= nil then return false end
+                    return sameSet(sigSet, (significant(testedTags)))
+                end
+            end
+
+            -- 3) Fall back to the # subclass (Kunos style).
+            local subclass = subclassOf(selectedTags)
+            if subclass ~= nil then
+                log('no category or meaningful tags, using subclass: ' .. subclass)
+                return function(tested)
+                    return strutils.equals_i(selectedClass, tested.CarClass) and subclassOf(tagsOf(tested)) == subclass
+                end
+            end
+
+            -- 4) Nothing to go on: single-make race with the selected car.
+            log('can’t detect category, using the selected car only')
+            local selectedId = selected.Id
+            return function(tested)
+                return tested.Id == selectedId
+            end"
     }
 ]
